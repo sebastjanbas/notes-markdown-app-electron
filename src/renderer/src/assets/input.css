@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* bunx tailwindcss -i ./src/renderer/src/assets/input.css -o ./src/renderer/src/assets/main.css --watch; */
+
+@layer base {
+  #root {
+    @apply h-full;
+  }
+
+  html,
+  body {
+    @apply h-full;
+
+    @apply select-none;
+  }
+}
