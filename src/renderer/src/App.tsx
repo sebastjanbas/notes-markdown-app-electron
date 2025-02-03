@@ -1,11 +1,16 @@
-function App() {
+import { ActionButtonsRow, Content, DraggableTopBar, RootLayout, Sidebar } from '@/components'
+
+const App = () => {
   return (
-    <div className="h-screen w-screen">
-      <div className="h-full w-full flex flex-col justify-center items-center gap-y-4">
-        <h1 className="text-5xl font-bold text-indigo-700">Hello World</h1>
-        <p className="text-lg">This is my first electron application</p>
-      </div>
-    </div>
+    <>
+      <DraggableTopBar />
+      <RootLayout>
+        <Sidebar className="p-2 ">
+          <ActionButtonsRow className="flex justify-between mt-1" />
+        </Sidebar>
+        <Content className="border-l bg-zinc-900/50 border-l-white/20">Content</Content>
+      </RootLayout>
+    </>
   )
 }
 
